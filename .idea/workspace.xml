@@ -3,38 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7192d3f5-e6c5-4e4d-b064-fab0d8856b3c" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/b3b72649-0f1e-4be6-816f-55d93748aa76.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/b3b72649-0f1e-4be6-816f-55d93748aa76/storage_v2/_src_/schema/school.dFvhyQ.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/b3b72649-0f1e-4be6-816f-55d93748aa76/storage_v2/_src_/schema/school.dFvhyQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/phpbin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bb1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/connect.inc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courseAll.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/courseInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dropcourse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradeInput.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradereport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mycourse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mystudent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/operator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rootIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/school.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/selectcourse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studentAll.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studentInfo.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/studentindex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacherAll.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/teacherIndex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -247,7 +220,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -273,12 +246,20 @@
       <updated>1558514069955</updated>
       <workItem from="1558514071850" duration="25725000" />
       <workItem from="1558577570269" duration="5327000" />
-      <workItem from="1558586067607" duration="4195000" />
+      <workItem from="1558586067607" duration="4381000" />
     </task>
+    <task id="LOCAL-00001" summary="php schoolmanagemnet">
+      <created>1558595697585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1558595697585</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35247000" />
+    <option name="totallyTimeSpent" value="35433000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,6 +272,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.110738255" />
@@ -340,6 +322,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="php schoolmanagemnet" />
+    <option name="LAST_COMMIT_MESSAGE" value="php schoolmanagemnet" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3b72649-0f1e-4be6-816f-55d93748aa76/console.sql">

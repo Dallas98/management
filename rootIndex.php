@@ -47,7 +47,7 @@ if (isset($_SESSION["IsLogin"]) && $_SESSION["IsLogin"] === 1) {
 
 
 <div class="container">
-<!--    选定学期-->
+    <!--    选定学期-->
     <form class="form-inline" role="form" method="post">
         <div class="form-group">
             <?php

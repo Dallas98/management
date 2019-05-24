@@ -2,11 +2,9 @@
 <?php
 session_start();
 
-if(isset($_SESSION["IsLogin"])&&$_SESSION["IsLogin"]===1){
+if (isset($_SESSION["IsLogin"]) && $_SESSION["IsLogin"] === 1) {
     //echo "欢迎来到教师选课管理系统，";
     //echo "当前用户".$_SESSION["username"];
-
-
 
 
 }
@@ -28,7 +26,7 @@ if(isset($_SESSION["IsLogin"])&&$_SESSION["IsLogin"]===1){
 ?>
 <html>
 <head>
-    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -72,14 +70,15 @@ if(isset($_SESSION["IsLogin"])&&$_SESSION["IsLogin"]===1){
 <div class="container">
     <form class="form-inline" role="form" method="post">
         <?php
-        require  "connect.inc.php";
-        $sql3="select mc from d";
-        $result3=$conn->query($sql3);
+        require "connect.inc.php";
+        $sql3 = "select mc from d";
+        $result3 = $conn->query($sql3);
         ?>
         <select class="form-control" name="mc">
+            <option value="所有学生">所有学生</option>
             <?php
-            if($result3->num_rows>0){
-                while($row3=$result3->fetch_assoc()){
+            if ($result3->num_rows > 0) {
+                while ($row3 = $result3->fetch_assoc()) {
                     ?>
                     <option><?php echo $row3["mc"] ?></option>
                     <?php
@@ -92,12 +91,12 @@ if(isset($_SESSION["IsLogin"])&&$_SESSION["IsLogin"]===1){
     <table>
         <?php
         require "connect.inc.php";
-        $sql4="select num from count1";
-        $result4=$conn->query($sql4);
-        $row4=$result4->fetch_assoc();
-        $num=$row4["num"];?>
+        $sql4 = "select num from count1";
+        $result4 = $conn->query($sql4);
+        $row4 = $result4->fetch_assoc();
+        $num = $row4["num"]; ?>
         <thead>
-        <th>学生总人数:<?php echo $num?></th>
+        <th>学生总人数:<?php echo $num ?></th>
         </thead>
     </table>
     <table class="table">
@@ -112,8 +111,12 @@ if(isset($_SESSION["IsLogin"])&&$_SESSION["IsLogin"]===1){
         </thead>
         <?php
         require "connect.inc.php";
-        if(isset($_POST["sub"])){
-            $sql4 = "select * from s,d where s.yxh=d.yxh and d.mc='".$_POST["mc"]."'";
+        if ($_POST["mc"]==='所有学生') {
+            $sql4 = "select * from s,d where s.yxh=d.yxh and d.mc like '%学院'";
+        } else {
+            $sql4 = "select * from s,d where s.yxh=d.yxh and d.mc='" . $_POST["mc"] . "'";
+        }
+        if (isset($_POST["sub"])) {
             $result4 = $conn->query($sql4);
             if ($result4->num_rows > 0) {
                 // 输出数据

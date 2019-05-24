@@ -1131,260 +1131,280 @@
     <table id="285" parent="5" name="term">
       <Collation>utf8_general_ci</Collation>
     </table>
-    <routine id="286" parent="5" name="jia">
-      <SourceTextLength>42</SourceTextLength>
+    <table id="286" parent="5" name="xishu">
+      <Collation>utf8_general_ci</Collation>
+    </table>
+    <routine id="287" parent="5" name="jia">
+      <SourceTextLength>44</SourceTextLength>
       <Definer>root@localhost</Definer>
       <RoutineKind>procedure</RoutineKind>
     </routine>
-    <routine id="287" parent="5" name="sub">
-      <SourceTextLength>42</SourceTextLength>
+    <routine id="288" parent="5" name="sub">
+      <SourceTextLength>44</SourceTextLength>
       <Definer>root@localhost</Definer>
       <RoutineKind>procedure</RoutineKind>
     </routine>
-    <column id="288" parent="277" name="kh">
+    <column id="289" parent="277" name="kh">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="289" parent="277" name="km">
+    <column id="290" parent="277" name="km">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="290" parent="277" name="xf">
+    <column id="291" parent="277" name="xf">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="291" parent="277" name="xs">
+    <column id="292" parent="277" name="xs">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="292" parent="277" name="yxh">
+    <column id="293" parent="277" name="yxh">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="293" parent="277" name="PRIMARY">
+    <key id="294" parent="277" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>kh</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="294" parent="278" name="num">
+    <column id="295" parent="278" name="num">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="279" name="yxh">
+    <column id="296" parent="279" name="yxh">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="279" name="mc">
+    <column id="297" parent="279" name="mc">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="279" name="dz">
+    <column id="298" parent="279" name="dz">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="279" name="lxdh">
+    <column id="299" parent="279" name="lxdh">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="299" parent="279" name="PRIMARY">
+    <key id="300" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>yxh</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="280" name="xh">
+    <column id="301" parent="280" name="xh">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="280" name="xq">
+    <column id="302" parent="280" name="xq">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="280" name="kh">
+    <column id="303" parent="280" name="kh">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="280" name="gh">
+    <column id="304" parent="280" name="gh">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="304" parent="280" name="pscj">
+    <column id="305" parent="280" name="pscj">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="280" name="kscj">
+    <column id="306" parent="280" name="kscj">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="280" name="zpcj">
+    <column id="307" parent="280" name="zpcj">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="281" name="xq">
+    <trigger id="308" parent="280" name="E_ZPCJ">
+      <SourceTextLength>126</SourceTextLength>
+      <Definer>root@localhost</Definer>
+      <Turn>before-row</Turn>
+      <Events>U</Events>
+    </trigger>
+    <column id="309" parent="281" name="xq">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="281" name="kh">
+    <column id="310" parent="281" name="kh">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="281" name="gh">
+    <column id="311" parent="281" name="gh">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="281" name="sksj">
+    <column id="312" parent="281" name="sksj">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="311" parent="281" name="xkrs">
+    <column id="313" parent="281" name="xkrs">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="312" parent="282" name="gh">
+    <column id="314" parent="282" name="gh">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="282" name="xm">
+    <column id="315" parent="282" name="xm">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="282" name="pwd">
+    <column id="316" parent="282" name="pwd">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="283" name="xh">
+    <column id="317" parent="283" name="xh">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="316" parent="283" name="xm">
+    <column id="318" parent="283" name="xm">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="317" parent="283" name="xb">
+    <column id="319" parent="283" name="xb">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="283" name="csrq">
+    <column id="320" parent="283" name="csrq">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="319" parent="283" name="jg">
+    <column id="321" parent="283" name="jg">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="320" parent="283" name="sjhm">
+    <column id="322" parent="283" name="sjhm">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="321" parent="283" name="yxh">
+    <column id="323" parent="283" name="yxh">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="283" name="pwd">
+    <column id="324" parent="283" name="pwd">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <trigger id="323" parent="283" name="s_AFTER_INSERT">
+    <trigger id="325" parent="283" name="s_AFTER_INSERT">
       <SourceTextLength>25</SourceTextLength>
       <Definer>root@localhost</Definer>
       <Turn>after-row</Turn>
       <Events>I</Events>
     </trigger>
-    <trigger id="324" parent="283" name="s_AFTER_DELETE">
+    <trigger id="326" parent="283" name="s_AFTER_DELETE">
       <SourceTextLength>25</SourceTextLength>
       <Definer>root@localhost</Definer>
       <Turn>after-row</Turn>
       <Events>D</Events>
     </trigger>
-    <column id="325" parent="284" name="gh">
+    <column id="327" parent="284" name="gh">
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="284" name="xm">
+    <column id="328" parent="284" name="xm">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="327" parent="284" name="xb">
+    <column id="329" parent="284" name="xb">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="328" parent="284" name="csrq">
+    <column id="330" parent="284" name="csrq">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="329" parent="284" name="xl">
+    <column id="331" parent="284" name="xl">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="330" parent="284" name="jgbz">
+    <column id="332" parent="284" name="jgbz">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="331" parent="284" name="yxh">
+    <column id="333" parent="284" name="yxh">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="332" parent="284" name="pwd">
+    <column id="334" parent="284" name="pwd">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="285" name="id">
+    <column id="335" parent="285" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="285" name="xq">
+    <column id="336" parent="285" name="xq">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="335" parent="285" name="PRIMARY">
+    <key id="337" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+    <column id="338" parent="286" name="id">
+      <Position>1</Position>
+      <DataType>int(2)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="339" parent="286" name="ratio">
+      <Position>2</Position>
+      <DataType>decimal(2,1 digit)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
   </database-model>
 </dataSource>

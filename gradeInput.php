@@ -70,7 +70,7 @@ if (isset($_SESSION["IsLogin"]) && $_SESSION["IsLogin"] === 1) {
             <input type="text" class="form-control" name="pscj" placeholder="输入平时成绩"/>
             <input type="text" class="form-control" name="kscj" placeholder="输入考试成绩"/>
             <input type="text" class="form-control" name="zb" placeholder="平时成绩比例"/>
-<!--            <input type="text" class="form-control" name="zpcj" placeholder="输入总评成绩"/>-->
+            <!--            <input type="text" class="form-control" name="zpcj" placeholder="输入总评成绩"/>-->
             <button type="submit" class="btn btn-default" name="sub2">修改成绩</button>
         </div>
     </form>
@@ -85,14 +85,42 @@ if (isset($_SESSION["IsLogin"]) && $_SESSION["IsLogin"] === 1) {
         <th>考试成绩</th>
         <th>总评成绩</th>
         </thead>
-    <?php
-    require "connect.inc.php";
-    if (isset($_POST["sub1"])) {  //查询所有学生的成绩
-    $_SESSION["km"] = $_POST["kname"];    //根据选择的课程名查询
-    $sql4 = "select e.xh,s.xm,c.km,e.pscj,e.kscj,e.zpcj from e ,c,s where e.xh=s.xh and e.kh=c.kh and c.km='" . $_POST["kname"] . "'and e.gh='" . $_SESSION["username"] . "'";
-    $result4 = $conn->query($sql4);
-        if ($result4->num_rows > 0) {
-            // 输出数据
+        <?php
+        require "connect.inc.php";
+        if (isset($_POST["sub1"])) {  //查询所有学生的成绩
+            $_SESSION["km"] = $_POST["kname"];    //根据选择的课程名查询
+            $sql4 = "select e.xh,s.xm,c.km,e.pscj,e.kscj,e.zpcj from e ,c,s where e.xh=s.xh and e.kh=c.kh and c.km='" . $_POST["kname"] . "'and e.gh='" . $_SESSION["username"] . "'";
+            $result4 = $conn->query($sql4);
+            if ($result4->num_rows > 0) {
+                // 输出数据
+                while ($row4 = $result4->fetch_assoc()) {
+                    ?>
+                    <tr>
+                        <td><?php echo $row4["xh"] ?></td>
+                        <td><?php echo $row4["xm"] ?></td>
+                        <td><?php echo $row4["km"] ?></td>
+                        <td><?php echo $row4["pscj"] ?></td>
+                        <td><?php echo $row4["kscj"] ?></td>
+                        <td><?php echo $row4["zpcj"] ?></td>
+                    </tr>
+                    <?php
+                }
+            }
+        }
+        require "connect.inc.php";
+        if (isset($_POST["sub2"])) {
+            $km = $_SESSION["km"];
+            $pscj = $_POST["pscj"];
+            $kscj = $_POST["kscj"];
+//            $zpcj = ($pscj * $_POST["zb"] + $kscj * (1 - $_POST["zb"]));
+            $sql1 = "update xishu set ratio='" . $_POST["zb"] . "'";
+            $conn->query($sql1);
+            $sql5 = "update e set pscj='" . $_POST["pscj"] . "',kscj='" . $_POST["kscj"] . "' where xh='" . $_POST["xh"] . "'and kh in(select kh from c where km='" . $_SESSION["km"] . "')";
+            if ($conn->query($sql5)) {
+                $sql4 = "select e.xh,s.xm,c.km,e.pscj,e.kscj,e.zpcj from e ,c,s where e.xh=s.xh and e.kh=c.kh and c.km='" . $_SESSION["km"] . "'and e.gh='" . $_SESSION["username"] . "'";
+                $result4 = $conn->query($sql4);
+            if ($result4->num_rows > 0) {
+                // 输出数据
             while ($row4 = $result4->fetch_assoc()) {
                 ?>
                 <tr>
@@ -103,40 +131,14 @@ if (isset($_SESSION["IsLogin"]) && $_SESSION["IsLogin"] === 1) {
                     <td><?php echo $row4["kscj"] ?></td>
                     <td><?php echo $row4["zpcj"] ?></td>
                 </tr>
-                <?php
+            <?php
             }
-        }
-        }
-        require "connect.inc.php";
-        if(isset($_POST["sub2"])) {
-            $km = $_SESSION["km"];
-            $pscj = $_POST["pscj"];
-            $kscj = $_POST["kscj"];
-            $zpcj = ($pscj*$_POST["zb"]+$kscj*(1-$_POST["zb"]));
-            $sql5 = "update e set pscj='" . $_POST["pscj"] . "',kscj='" . $_POST["kscj"] . "',zpcj=$zpcj where xh='" . $_POST["xh"] . "'and kh in(select kh from c where km='" . $_SESSION["km"] . "')";
-            if ($conn->query($sql5)) {
-                $sql4 = "select e.xh,s.xm,c.km,e.pscj,e.kscj,e.zpcj from e ,c,s where e.xh=s.xh and e.kh=c.kh and c.km='" . $_SESSION["km"] . "'and e.gh='" . $_SESSION["username"] . "'";
-                $result4 = $conn->query($sql4);
-                if ($result4->num_rows > 0) {
-                    // 输出数据
-                    while ($row4 = $result4->fetch_assoc()) {
-                        ?>
-                        <tr>
-                            <td><?php echo $row4["xh"] ?></td>
-                            <td><?php echo $row4["xm"] ?></td>
-                            <td><?php echo $row4["km"] ?></td>
-                            <td><?php echo $row4["pscj"] ?></td>
-                            <td><?php echo $row4["kscj"] ?></td>
-                            <td><?php echo $row4["zpcj"] ?></td>
-                        </tr>
-                        <?php
-                    }
-                }
-                ?>
+            }
+            ?>
                 <script>
                     window.alert("修改成功")
                 </script>
-        <?php
+                <?php
             }
         }
         ?>
